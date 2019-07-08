@@ -50,8 +50,10 @@ export class LoginComponent {
   }
 
   tryLogin(value){
+    console.log(value);
     this.authService.doLogin(value)
     .then(res => {
+      console.log(res);
       this.router.navigate(['/user']);
     }, err => {
       console.log(err);
